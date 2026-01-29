@@ -3,7 +3,7 @@ backup-*/
 
 # Environment files contain sensitive data
 .env
-example.env
+# example.env - Uncomment if you don't want to track it
 
 # Exported bicep folder is regenerated on each run
 # Uncomment if you don't want to track it
