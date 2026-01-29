@@ -1,0 +1,10 @@
+# Backup folders contain secrets - never commit
+backup-*/
+
+# Environment files contain sensitive data
+.env
+example.env
+
+# Exported bicep folder is regenerated on each run
+# Uncomment if you don't want to track it
+# exported-bicep/
